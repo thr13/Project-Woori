@@ -1,6 +1,7 @@
 package com.woori.backend.stamp;
 
 import com.woori.backend.cafe.Cafe;
+import com.woori.backend.global.common.BaseTimeEntity;
 import com.woori.backend.user.User;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
@@ -11,7 +12,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name = "stamps")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class Stamp {
+public class Stamp extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
