@@ -1,6 +1,7 @@
 package com.woori.backend.user;
 
 import com.woori.backend.cafe.Cafe;
+import com.woori.backend.global.common.BaseTimeEntity;
 import com.woori.backend.global.common.Role;
 import com.woori.backend.stamp.Stamp;
 import jakarta.persistence.*;
@@ -15,7 +16,7 @@ import java.util.List;
 @Entity
 @Table(name = "users")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
-public class User {
+public class User extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
